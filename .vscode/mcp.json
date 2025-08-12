@@ -1,0 +1,20 @@
+{
+  "servers": {
+    "software-agent": {
+      "type": "stdio",
+      "command": "node",
+      "args": ["${workspaceFolder}/dist/server.js"],
+      "env": {
+        "GITHUB_TOKEN": "${input:githubToken}"
+      }
+    }
+  },
+  "inputs": [
+    {
+      "type": "promptString",
+      "id": "githubToken",
+      "description": "GitHub Personal Access Token (repo scope)",
+      "password": true
+    }
+  ]
+}
