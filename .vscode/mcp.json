@@ -3,7 +3,7 @@
     "software-agent": {
       "type": "stdio",
       "command": "node",
-      "args": ["${workspaceFolder}/dist/server.js"],
+      "args": ["C:\\Users\\aaand\\Documents\\Projects\\software-agent\\dist\\index.js"],
       "env": {
         "GITHUB_TOKEN": "${input:githubToken}"
       }
@@ -14,6 +14,12 @@
       "type": "promptString",
       "id": "githubToken",
       "description": "GitHub Personal Access Token (repo scope)",
+      "password": true
+    },
+    {
+      "type": "promptString",
+      "id": "openAIAPIKey",
+      "description": "OpenAI API Key",
       "password": true
     }
   ]
